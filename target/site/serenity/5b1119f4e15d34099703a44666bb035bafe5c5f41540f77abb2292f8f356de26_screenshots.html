@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="b794db62b6b8c5b99f2251daae0f8c0b3e97ab761115ef3ae59c266dd895cbfa.html">User On Register Page</a></span>
+                > <span class="truncate-60"><a
+                    href="5b1119f4e15d34099703a44666bb035bafe5c5f41540f77abb2292f8f356de26.html">user input email tanpa menggunakan '@' </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 18-07-2022 09:41</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">User On Register Page</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="e03a067e2b5fc68f6bffffd00b843c6d2ab69a8a38d4201f01b209e4ad548e57.html">Nyoba
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">user input email tanpa menggunakan '@'
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="1fea2ace4032b32565d23fb032d1eba10dce55ef2eb68314aae7cede772876ef.png" title=" Given user on register page" width="1554"/>
+                <img src="1fea2ace4032b32565d23fb032d1eba10dce55ef2eb68314aae7cede772876ef.png" title=" On register page" width="1554"/>
+                <img src="1fea2ace4032b32565d23fb032d1eba10dce55ef2eb68314aae7cede772876ef.png" title=" Given user on register page (completed)" width="1554"/>
+                <img src="86d2c2a8c82b2b2087f67c5bb0ac792d76b221a9666a6458a43a445bc42e0223.png" title=" When user input valid nama depan" width="1554"/>
+                <img src="86d2c2a8c82b2b2087f67c5bb0ac792d76b221a9666a6458a43a445bc42e0223.png" title=" Type first name: Hazle" width="1554"/>
+                <img src="ac5ab180a1c4337ea04356ef4ee14609304ce6c9577cbd085d8c55412a318041.png" title=" Type first name: Hazle (completed)" width="1554"/>
+                <img src="ac5ab180a1c4337ea04356ef4ee14609304ce6c9577cbd085d8c55412a318041.png" title=" When user input valid nama depan (completed)" width="1554"/>
+                <img src="e05d9e26678de15d14a76abc6fbc42be092a2846c547f9d5a418c45a92aad984.png" title=" And user input valid nama belakang" width="1554"/>
+                <img src="e05d9e26678de15d14a76abc6fbc42be092a2846c547f9d5a418c45a92aad984.png" title=" Type last name: Kling" width="1554"/>
+                <img src="e05d9e26678de15d14a76abc6fbc42be092a2846c547f9d5a418c45a92aad984.png" title=" And user input valid nama belakang (completed)" width="1554"/>
+                <img src="527c608f6d5f4ae7d7d89c8a2d4c8de6eb9f7452a3b6d70350443e4e405653bb.png" title=" And user input email iimail" width="1554"/>
+                <img src="527c608f6d5f4ae7d7d89c8a2d4c8de6eb9f7452a3b6d70350443e4e405653bb.png" title=" Type email: iimail" width="1554"/>
+                <img src="527c608f6d5f4ae7d7d89c8a2d4c8de6eb9f7452a3b6d70350443e4e405653bb.png" title=" And user input email iimail (completed)" width="1554"/>
+                <img src="c7236438c43b4569b94d8d9c18083e1e98008bc8de9c161c41a25d5d5c16825b.png" title=" And user input valid password katasandi" width="1554"/>
+                <img src="c7236438c43b4569b94d8d9c18083e1e98008bc8de9c161c41a25d5d5c16825b.png" title=" Type password: katasandi" width="1554"/>
+                <img src="c7236438c43b4569b94d8d9c18083e1e98008bc8de9c161c41a25d5d5c16825b.png" title=" And user input valid password katasandi (completed)" width="1554"/>
+                <img src="49dafd725664345cabc32a75cc78be94e13856a2bb8d0a81dd211261973c96a5.png" title=" And user input confirm password katasandi" width="1554"/>
+                <img src="49dafd725664345cabc32a75cc78be94e13856a2bb8d0a81dd211261973c96a5.png" title=" Type confirm password: katasandi" width="1554"/>
+                <img src="49dafd725664345cabc32a75cc78be94e13856a2bb8d0a81dd211261973c96a5.png" title=" And user input confirm password katasandi (completed)" width="1554"/>
+                <img src="8dcf3193a3afe34844702332279297e9cf550017e54543d21b7d617696b1c8a1.png" title=" And user input valid tanggal lahir" width="1554"/>
+                <img src="8dcf3193a3afe34844702332279297e9cf550017e54543d21b7d617696b1c8a1.png" title=" Click tanggal" width="1554"/>
+                <img src="8dcf3193a3afe34844702332279297e9cf550017e54543d21b7d617696b1c8a1.png" title=" Pilih tanggal" width="1554"/>
+                <img src="8dcf3193a3afe34844702332279297e9cf550017e54543d21b7d617696b1c8a1.png" title=" Pilih tanggal (completed)" width="1554"/>
+                <img src="8dcf3193a3afe34844702332279297e9cf550017e54543d21b7d617696b1c8a1.png" title=" Click bulan" width="1554"/>
+                <img src="fe47de04f84e372acd97a3117924083a5c82501c4504a2713857cc8aed32a5f9.png" title=" Click bulan (completed)" width="1554"/>
+                <img src="fe47de04f84e372acd97a3117924083a5c82501c4504a2713857cc8aed32a5f9.png" title=" Pilih bulan" width="1554"/>
+                <img src="9a328df1a49c785e2379ed99d8501aff2727a516ff21ebc804d1f6795cfb2ae4.png" title=" Pilih bulan (completed)" width="1554"/>
+                <img src="9a328df1a49c785e2379ed99d8501aff2727a516ff21ebc804d1f6795cfb2ae4.png" title=" Click tahun" width="1554"/>
+                <img src="98bc24e319ebf5bdcb952dd59bb5e3240b1cf734d97dc86f3b5ce459664ebb0c.png" title=" Click tahun (completed)" width="1554"/>
+                <img src="98bc24e319ebf5bdcb952dd59bb5e3240b1cf734d97dc86f3b5ce459664ebb0c.png" title=" Pilih tahun" width="1554"/>
+                <img src="64a06460963e4fc4d852496e230fe3a0263ea19fa584ebce24980c93c496068f.png" title=" Pilih tahun (completed)" width="1554"/>
+                <img src="64a06460963e4fc4d852496e230fe3a0263ea19fa584ebce24980c93c496068f.png" title=" And user input valid tanggal lahir (completed)" width="1554"/>
+                <img src="1c0c65520c03574ede4ec881762f2a2290b2c4cecad78bf8dd4eaa27be4cdb09.png" title=" And user pilih jenis kelamin" width="1554"/>
+                <img src="1c0c65520c03574ede4ec881762f2a2290b2c4cecad78bf8dd4eaa27be4cdb09.png" title=" Type jenis kelamin" width="1554"/>
+                <img src="1c0c65520c03574ede4ec881762f2a2290b2c4cecad78bf8dd4eaa27be4cdb09.png" title=" And user pilih jenis kelamin (completed)" width="1554"/>
+                <img src="c80fe94454d11c6244e2328fff44c2b7592a251f7e52ef58daed65cc723a5a57.png" title=" And user klik Daftar button" width="1554"/>
+                <img src="c80fe94454d11c6244e2328fff44c2b7592a251f7e52ef58daed65cc723a5a57.png" title=" Click register button" width="1554"/>
+                <img src="c80fe94454d11c6244e2328fff44c2b7592a251f7e52ef58daed65cc723a5a57.png" title=" And user klik Daftar button (completed)" width="1554"/>
+                <img src="c80fe94454d11c6244e2328fff44c2b7592a251f7e52ef58daed65cc723a5a57.png" title=" Then user got message2 invalid email: <span class='success-color'>SUCCESS</span>" width="1554"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.4.51</span>
+</div>
+</body>
+</html>

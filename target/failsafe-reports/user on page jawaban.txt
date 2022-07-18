@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: user on page jawaban
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.467 s - in user on page jawaban
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.718 s - in user on page jawaban

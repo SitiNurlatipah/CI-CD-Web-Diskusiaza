@@ -1,3 +1,4 @@
+@landing
 Feature: User on landing page
 
   Scenario: User membuka page pertanyaan
