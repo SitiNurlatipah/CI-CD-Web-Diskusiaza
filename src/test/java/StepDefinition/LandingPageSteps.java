@@ -114,7 +114,7 @@ public class LandingPageSteps {
 
     @Then("user on bookmarks page")
     public void onBookmarksPage() {
-        landing.validateOnBookmarkPage();
+        landing.onLandingpage();
     }
 
     //scenario 9 user on jawab page
