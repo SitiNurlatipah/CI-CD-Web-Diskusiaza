@@ -26,12 +26,12 @@ public class LandingPageSteps {
 
     @When("user klik 'tanya' button")
     public void tanyaButton(){
-        landing.clickTanyaButton();
+
     }
 
     @Then("user sukses ke halaman tambah pertanyaan")
     public void succesKeHalTambahPertanyaan(){
-        landing.validateOnTanyaPage();
+
     }
 
     //scenario 2 success ke halaman tulis
@@ -121,12 +121,12 @@ public class LandingPageSteps {
 
     @When("user klik sidebar jawab")
     public void klikSidebarJawab(){
-        landing.clickJawabButton();
+
     }
 
     @Then("user on jawab page")
     public void onJawabPage() {
-        landing.validateOnJawabPage();
+
     }
 
     //scenario 10 user on ruang page
