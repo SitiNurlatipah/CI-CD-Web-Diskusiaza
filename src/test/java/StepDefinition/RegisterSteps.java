@@ -144,7 +144,7 @@ public class RegisterSteps {
     }
 
     @And("user input valid email4")
-    public void inputValidEmail4(){
+    public void inputValidEmail4x(){
         Faker faker=new Faker();
         regist.typeEmail(faker.internet().emailAddress());
     }
